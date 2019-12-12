@@ -3,6 +3,7 @@ const cartes = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10];
 const cartes_etat = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 let cartes_choisis = [];
 let carte_gagner = 0;
+let coup = 0;
 
 for (let i = 0; i < image_cartes.length; i++) {
     image_cartes[i].pas_Carte = i;
@@ -27,9 +28,14 @@ function modif_carte(pas_Carte){
     }
 }
 
+const fin = document.getElementById('fin');
+const nbCoup = document.getElementById('nbCoup');
+
 function rejouer(){
-    alert("Bravo !");
-    location.reload();
+    document.body.style.background = 'cadetblue';
+    jeu.style.display = 'none';
+    fin.style.display = 'block';
+    nbCoup.innerHTML = coup;
 }
 
 function init(){
@@ -66,6 +72,7 @@ function controleur(pas_Carte) {
                 modif_carte(cartes_choisis[0]);
                 modif_carte(cartes_choisis[1]);
                 cartes_choisis = [];
+                coup++;
 
                 if (carte_gagner === 10){
                     rejouer();
@@ -78,8 +85,13 @@ function controleur(pas_Carte) {
 const jouer = document.getElementById('jouer');
 const acceuil = document.getElementById('acceuil');
 const jeu = document.getElementById('jeu');
+const encore_jouer = document.getElementById('rejouer');
 
 jouer.addEventListener("click", function () {
     acceuil.style.display = 'none';
     jeu.style.display = 'flex';
+});
+
+encore_jouer.addEventListener("click", function () {
+    window.location.reload();
 });

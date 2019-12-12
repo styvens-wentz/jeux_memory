@@ -8,11 +8,11 @@
           integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="base.css">
     <title>Jeux de Mémoire</title>
+
 </head>
 <body>
-
 <h1 id="titre">Jeux de Mémoire</h1>
-
+<div ></div>
 <div id="acceuil">
     <div id="slide">
         <div id="carrousel">
@@ -56,6 +56,15 @@
     </div>
 </div>
 
+<div id="fin">
+    <h1>Félicitation</h1>
+    <h2>Vous avez terminer en <span id="nbCoup"></span> coups</h2>
+    <input type="button" value="Rejouer" id="rejouer">
+    <div id="feu_artifice">
+        <script type="text/javascript" src="http://www.patmax.info/station_scripts/artifice.js"></script>
+    </div>
+</div>
+
 <!-- Optional -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
         integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
@@ -67,5 +76,6 @@
         integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
         crossorigin="anonymous"></script>
 <script src="base.js"></script>
+
 </body>
 </html>

@@ -1,0 +1,67 @@
+#titre {
+    text-align: center;
+    font-size: 50px;
+    background: grey;
+    color: aqua;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+}
+
+img {
+    cursor: pointer;
+    margin: 5px;
+}
+
+#carte {
+    max-width: 800px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#jeu {
+    display: flex;
+    justify-content: center;
+}
+
+@media(max-width: 1024px) {
+    img {
+        height: 150px;
+        width: 200px;
+    }
+    #carte {
+        max-width: 1024px;
+        justify-content: center;
+    }
+}
+
+@media(max-width: 768px) {
+
+    img {
+        height: 135px;
+        width: 185px;
+        margin: initial;
+    }
+}
+
+@media(max-width: 414px) {
+    img {
+        height: 100px;
+        width: 100px;
+    }
+}
+
+@media(max-width: 375px) {
+    img {
+        height: 55px;
+        width: 105px;
+        margin: 5px;
+    }
+}
+
+@media(max-width: 320px) {
+    img {
+        height: 50px;
+        width: 100px;
+        margin: 0;
+    }
+}

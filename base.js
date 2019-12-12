@@ -1,4 +1,4 @@
-const image_cartes = document.getElementsByTagName("img");
+const image_cartes = document.getElementsByClassName("carte_cacher");
 const cartes = [1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 9, 10, 10];
 const cartes_etat = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0];
 let cartes_choisis = [];
@@ -75,5 +75,11 @@ function controleur(pas_Carte) {
     }
 }
 
+const jouer = document.getElementById('jouer');
+const acceuil = document.getElementById('acceuil');
+const jeu = document.getElementById('jeu');
 
-
+jouer.addEventListener("click", function () {
+    acceuil.style.display = 'none';
+    jeu.style.display = 'flex';
+});

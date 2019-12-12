@@ -7,7 +7,7 @@
     margin-bottom: 30px;
 }
 
-img {
+.carte_cacher {
     height: 150px;
     width: 200px;
     cursor: pointer;
@@ -22,12 +22,12 @@ img {
 }
 
 #jeu {
-    display: flex;
+    display: none;
     justify-content: center;
 }
 
 @media(max-width: 1024px) {
-    img {
+    .carte_cacher {
         height: 150px;
         width: 200px;
     }
@@ -39,7 +39,7 @@ img {
 
 @media(max-width: 768px) {
 
-    img {
+    .carte_cacher {
         height: 135px;
         width: 185px;
         margin: initial;
@@ -47,14 +47,14 @@ img {
 }
 
 @media(max-width: 414px) {
-    img {
+    .carte_cacher {
         height: 100px;
         width: 100px;
     }
 }
 
 @media(max-width: 375px) {
-    img {
+    .carte_cacher {
         height: 55px;
         width: 105px;
         margin: 5px;
@@ -62,9 +62,66 @@ img {
 }
 
 @media(max-width: 320px) {
-    img {
+    .carte_cacher {
         height: 50px;
         width: 100px;
         margin: 0;
     }
+}
+
+#acceuil {
+    display: flex;
+    flex-direction: column;
+    place-items: center;
+    margin-top: 50px;
+}
+
+#jouer {
+    margin-top: 100px;
+    font-size: 30px;
+    width: 150px;
+    border-radius: 25px;
+    letter-spacing: 5px;
+    font-weight: bold;
+    background: grey;
+    color: aqua;
+    outline-style: none;
+}
+
+#slide {
+    width: 80%;
+    max-width: 400px;
+    overflow: hidden;
+}
+
+#slide img {
+    height: auto;
+    width: 10%;
+    float: left;
+    margin: 0;
+}
+
+#carrousel {
+    position: relative;
+    width: 1000%;
+    margin: 0;
+    padding: 0;
+    font-size: 0;
+    text-align: left;
+    animation: 30s slidy infinite;
+}
+
+@keyframes slidy {
+    0% {left: 0;}
+    5% {left: 0;}
+    11.11% {left: -100%;}
+    22.22% {left: -200%;}
+    33.33% {left: -300%;}
+    44.44% {left: -400%;}
+    55.55% {left: -500%;}
+    66.66% {left: -600%;}
+    77.77% {left: -700%;}
+    88.88% {left: -800%;}
+    100% {left: -900%;}
+
 }

@@ -154,9 +154,8 @@ body {
 
 @media(max-width: 375px) {
     .carte_cacher {
-        height: 55px;
-        width: 105px;
-        margin: 5px;
+        height: 90px;
+        width: 90px;
     }
 
     #fin h1 {
@@ -170,8 +169,8 @@ body {
 
 @media(max-width: 320px) {
     .carte_cacher {
-        height: 50px;
-        width: 100px;
+        height: 80px;
+        width: 80px;
         margin: 0;
     }
 
